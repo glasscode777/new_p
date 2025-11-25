@@ -39,16 +39,27 @@ header {
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 20px;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    /* ✅ 不換行 */
+    gap: clamp(10px, 4vw, 30px);
+    /* ✅ 間距自動縮小 */
     padding: 0;
+    margin: 0;
+}
+
+nav {
+    flex-shrink: 1;
 }
 
 nav a {
-    color: #eee;
+    font-size: clamp(12px, 2vw, 18px);
+    /* ✅ 字體自動縮小 */
+    letter-spacing: 0.5px;
     text-decoration: none;
+    color: #eee;
     transition: color 0.3s ease;
 }
 
@@ -328,10 +339,6 @@ footer {
    ✅ RWD：手機版
 ------------------------------ */
 @media (max-width: 768px) {
-
-    nav ul {
-        display: none;
-    }
 
     .menu-btn {
         display: block;
