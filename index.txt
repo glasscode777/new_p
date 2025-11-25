@@ -3,158 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Éclat Luxe | 奢華珠寶與腕錶</title>
+    <title>TRIANGLE COLOR | 奢華珠寶與腕錶</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Playfair+Display:wght@600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        margin: 0;
-        font-family: "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
-        background-color: #111;
-        color: #eee;
-        line-height: 1.8;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        background: rgba(0, 0, 0, 0.85);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-      .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        background: linear-gradient(to right, #bfa77f, #d9c8a9);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        margin: 0;
-        padding: 0;
-      }
-      nav a {
-        color: #eee;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-      nav a:hover {
-        color: #d9c8a9;
-      }
-      .lang-toggle {
-        display: flex;
-        gap: 10px;
-      }
-      .lang-btn,
-      .cta-button {
-        background: linear-gradient(to right, #bfa77f, #d9c8a9);
-        border: none;
-        padding: 10px 20px;
-        border-radius: 25px;
-        color: #fff;
-        font-weight: bold;
-        cursor: pointer;
-        text-decoration: none;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .lang-btn:hover,
-      .cta-button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 12px rgba(191, 167, 127, 0.6);
-      }
-      .lang-btn.active {
-        box-shadow: 0 0 8px rgba(191, 167, 127, 0.6);
-      }
-      .hero {
-        text-align: center;
-        padding: 120px 20px;
-        background: linear-gradient(to bottom, #1a1a1a, #000);
-        color: #fff;
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: "Playfair Display", "Noto Serif TC", serif;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-align: center;
-        margin-bottom: 20px;
-        background: linear-gradient(to right, #bfa77f, #d9c8a9);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      section {
-        padding: 80px 20px;
-      }
-      section p {
-        max-width: 800px;
-        margin: 0 auto 20px;
-        text-align: center;
-        font-size: 1.1rem;
-        color: #ccc;
-      }
-      .collections .grid {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        padding: 40px;
-      }
-      .collections .item {
-        background: #1a1a1a;
-        padding: 20px;
-        border-radius: 12px;
-        transition: box-shadow 0.3s ease;
-      }
-      .collections .item img {
-        width: 100%;
-        border-radius: 8px;
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-      }
-      .collections .item:hover {
-        box-shadow: 0 8px 20px rgba(191, 167, 127, 0.3);
-      }
-      .collections .item img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(191, 167, 127, 0.4);
-      }
-      /* 全站淡入特效 */
-      .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 1s ease, transform 1s ease;
-      }
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .fade-in.delay-1 {
-        transition-delay: 0.2s;
-      }
-      .fade-in.delay-2 {
-        transition-delay: 0.4s;
-      }
-      .fade-in.delay-3 {
-        transition-delay: 0.6s;
-      }
-      footer {
-        text-align: center;
-        padding: 20px;
-        background: #000;
-        color: #aaa;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css?v=1" />
   </head>
   <body>
     <header class="fade-in">
-      <div class="logo">Éclat Luxe</div>
+      <div class="logo">TRIANGLE COLOR</div>
       <nav>
         <ul>
           <li><a href="#collections" data-i18n="nav_collections">系列</a></li>
@@ -176,6 +34,24 @@
       <a href="#collections" class="cta-button" data-i18n="hero_cta"
         >立即探索</a
       >
+
+      <div class="hero-slider">
+        <div class="slide active">
+          <img src="images/redwoman.jpg" alt="Red Woman" />
+        </div>
+        <div class="slide">
+          <img src="images/partywoaman.jpg" alt="Party Woman" />
+        </div>
+        <div class="slide">
+          <img src="images/oldwoman.jpg" alt="Old Woman" />
+        </div>
+      </div>
+
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </section>
 
     <section id="collections" class="collections fade-in">
@@ -184,35 +60,26 @@
         每一件作品皆由頂尖工匠手工打造，融合現代設計與經典美學，展現低調卻無可忽視的奢華氣質。
       </p>
       <div class="grid">
-        <div class="item fade-in delay-1">
-          <img
-            src="https://via.placeholder.com/400x300?text=Jewelry"
-            alt="珠寶系列"
-            loading="lazy"
-          />
+        <a href="jewelry.html" target="_blank" class="item fade-in delay-1">
           <h3 data-i18n="collections_jewelry">珠寶系列</h3>
           <p data-i18n="collections_jewelry_desc">
             鑽石、紅寶石與翡翠的完美結合，象徵恆久與純粹，專為追求獨特品味的您而設計。
           </p>
-        </div>
-        <div class="item fade-in delay-2">
-          <img
-            src="https://via.placeholder.com/400x300?text=Watches"
-            alt="腕錶系列"
-            loading="lazy"
-          />
+        </a>
+
+        <a href="watch.html" target="_blank" class="item fade-in delay-2">
           <h3 data-i18n="collections_watch">腕錶系列</h3>
           <p data-i18n="collections_watch_desc">
-            精密機芯與優雅外觀的結合，讓時間不僅是流逝，更是一種恆久的藝術。
+            精密機芯與優雅外觀的結合，讓時間不僅僅只是流逝，更是一種恆久的藝術陪伴。
           </p>
-        </div>
+        </a>
       </div>
     </section>
 
     <section id="about" class="about fade-in">
       <h2 data-i18n="about_title">品牌故事</h2>
       <p data-i18n="about_text">
-        Éclat Luxe
+        TRIANGLE COLOR
         以精湛工藝與卓越設計，打造每一件傳世之作。從巴黎到台北，我們致力於呈現最純粹的奢華。
       </p>
       <p data-i18n="about_text2">
@@ -220,94 +87,125 @@
       </p>
     </section>
 
-    <section
-      id="contact"
-      class="contact fade-in"
-      style="background: #000; padding: 100px 20px; text-align: center"
-    >
-      <a href="contact.html" class="cta-button" data-i18n="contact_cta"
-        >聯絡我們</a
-      >
-    </section>
-  </body>
-</html>
-  <footer class="fade-in">
-    <p>&copy; 2025 Éclat Luxe. All rights reserved.</p>
-  </footer>
+    <footer class="fade-in">
+      <p>&copy; 2025 TRIANGLE COLOR. All rights reserved.</p>
+    </footer>
 
-  <script>
-    const translations = {
-      zh: {
-        nav_collections: "系列",
-        nav_about: "品牌故事",
-        nav_contact: "聯絡我們",
-        hero_title: "璀璨時光，恆久典藏",
-        hero_subtitle: "探索我們的珠寶與腕錶系列，感受永恆的奢華。",
-        hero_cta: "立即探索",
-        collections_title: "精選系列",
-        collections_desc: "每一件作品皆由頂尖工匠手工打造，融合現代設計與經典美學，展現低調卻無可忽視的奢華氣質。",
-        collections_jewelry: "珠寶系列",
-        collections_jewelry_desc: "鑽石、紅寶石與翡翠的完美結合，象徵恆久與純粹，專為追求獨特品味的您而設計。",
-        collections_watch: "腕錶系列",
-        collections_watch_desc: "精密機芯與優雅外觀的結合，讓時間不僅是流逝，更是一種恆久的藝術。",
-        about_title: "品牌故事",
-        about_text: "Éclat Luxe 以精湛工藝與卓越設計，打造每一件傳世之作。從巴黎到台北，我們致力於呈現最純粹的奢華。",
-        about_text2: "我們相信，真正的奢華並非浮誇，而是細節中的完美。每一顆寶石、每一道切割，都是對時間與美學的致敬。",
-        contact_cta: "聯絡我們"
-      },
-      en: {
-        nav_collections: "Collections",
-        nav_about: "About",
-        nav_contact: "Contact",
-        hero_title: "Timeless Brilliance, Eternal Elegance",
-        hero_subtitle: "Discover our jewelry and timepiece collections, crafted for lasting luxury.",
-        hero_cta: "Explore Now",
-        collections_title: "Featured Collections",
-        collections_desc: "Each masterpiece is handcrafted by top artisans, blending modern design with timeless aesthetics for understated luxury.",
-        collections_jewelry: "Jewelry",
-        collections_jewelry_desc: "Diamonds, rubies, and jade combined in perfect harmony, symbolizing eternity and purity for those with refined taste.",
-        collections_watch: "Watches",
-        collections_watch_desc: "A fusion of precision movements and elegant design, turning time into a lasting work of art.",
-        about_title: "Our Story",
-        about_text: "Éclat Luxe blends craftsmanship and design to create timeless masterpieces. From Paris to Taipei, we deliver pure luxury.",
-        about_text2: "We believe true luxury is not ostentation, but perfection in detail. Every gem and every cut is a tribute to time and beauty.",
-        contact_cta: "Contact Us"
-      }
-    };
+    <script>
+      const translations = {
+        zh: {
+          nav_collections: "系列",
+          nav_about: "品牌故事",
+          nav_contact: "聯絡我們",
+          hero_title: "璀璨時光，恆久典藏",
+          hero_subtitle: "探索我們的珠寶與腕錶系列，感受永恆的奢華。",
+          hero_cta: "立即探索",
+          collections_title: "精選系列",
+          collections_desc:
+            "每一件作品皆由頂尖工匠手工打造，融合現代設計與經典美學，展現低調卻無可忽視的奢華氣質。",
+          collections_jewelry: "珠寶系列",
+          collections_jewelry_desc:
+            "鑽石、紅寶石與翡翠的完美結合，象徵恆久與純粹，專為追求獨特品味的您而設計。",
+          collections_watch: "腕錶系列",
+          collections_watch_desc:
+            "精密機芯與優雅外觀的結合，讓時間不僅是流逝，更是一種恆久的藝術。",
+          about_title: "品牌故事",
+          about_text:
+            "TRIANGLE COLOR 以精湛工藝與卓越設計，打造每一件傳世之作。從巴黎到台北，我們致力於呈現最純粹的奢華。",
+          about_text2:
+            "我們相信，真正的奢華並非浮誇，而是細節中的完美。每一顆寶石、每一道切割，都是對時間與美學的致敬。",
+        },
+        en: {
+          nav_collections: "Collections",
+          nav_about: "About",
+          nav_contact: "Contact",
+          hero_title: "Timeless Brilliance, Eternal Elegance",
+          hero_subtitle:
+            "Discover our jewelry and timepiece collections, crafted for lasting luxury.",
+          hero_cta: "Explore Now",
+          collections_title: "Featured Collections",
+          collections_desc:
+            "Each masterpiece is handcrafted by top artisans, blending modern design with timeless aesthetics for understated luxury.",
+          collections_jewelry: "Jewelry",
+          collections_jewelry_desc:
+            "Diamonds, rubies, and jade combined in perfect harmony, symbolizing eternity and purity for those with refined taste.",
+          collections_watch: "Watches",
+          collections_watch_desc:
+            "A fusion of precision movements and elegant design, turning time into a lasting work of art.",
+          about_title: "Our Story",
+          about_text:
+            "TRIANGLE COLOR blends craftsmanship and design to create timeless masterpieces. From Paris to Taipei, we deliver pure luxury.",
+          about_text2:
+            "We believe true luxury is not ostentation, but perfection in detail. Every gem and every cut is a tribute to time and beauty.",
+        },
+      };
 
-    function switchLanguage(lang) {
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        el.textContent = translations[lang][key];
-      });
-      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-        const key = el.getAttribute("data-i18n-placeholder");
-        el.placeholder = translations[lang][key];
-      });
-      document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
-      document.getElementById(`lang-${lang}`).classList.add("active");
-      localStorage.setItem("preferredLang", lang);
-    }
-
-    document.getElementById("lang-zh").addEventListener("click", () => switchLanguage("zh"));
-    document.getElementById("lang-en").addEventListener("click", () => switchLanguage("en"));
-
-    window.addEventListener("DOMContentLoaded", () => {
-      const savedLang = localStorage.getItem("preferredLang");
-      const userLang = savedLang || (navigator.language.includes("zh") ? "zh" : "en");
-      switchLanguage(userLang);
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
+      function switchLanguage(lang) {
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          el.textContent = translations[lang][key];
         });
-      }, { threshold: 0.2 });
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+          const key = el.getAttribute("data-i18n-placeholder");
+          el.placeholder = translations[lang][key];
+        });
+        document
+          .querySelectorAll(".lang-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document.getElementById(`lang-${lang}`).classList.add("active");
+        localStorage.setItem("preferredLang", lang);
+      }
 
-      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-    });
-  </script>
-</body>
+      document
+        .getElementById("lang-zh")
+        .addEventListener("click", () => switchLanguage("zh"));
+      document
+        .getElementById("lang-en")
+        .addEventListener("click", () => switchLanguage("en"));
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const savedLang = localStorage.getItem("preferredLang");
+        const userLang =
+          savedLang || (navigator.language.includes("zh") ? "zh" : "en");
+        switchLanguage(userLang);
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        document
+          .querySelectorAll(".fade-in")
+          .forEach((el) => observer.observe(el));
+      });
+
+      const slides = document.querySelectorAll(".hero-slider .slide");
+      const dots = document.querySelectorAll(".dot");
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+          dots[i].classList.toggle("active", i === index);
+        });
+        currentIndex = index;
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => showSlide(i));
+      });
+
+      setInterval(() => {
+        let nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex);
+      }, 8000);
+    </script>
+  </body>
 </html>
