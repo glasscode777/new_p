@@ -11,26 +11,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="jewelry.css" />
-
-    <div class="hamburger">
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-btn">
-        <span></span>
-      </label>
-
-      <div class="side-menu">
-        <ul>
-          <li><a href="index.html">首頁</a></li>
-          <li><a href="jewelry.html">珠寶系列</a></li>
-          <li><a href="watch.html">腕錶系列</a></li>
-          <li><a href="contact.html">聯絡我們</a></li>
-        </ul>
-      </div>
-
-      <div class="overlay"></div>
-    </div>
-
-    <!-- 主站 CSS（建議放在外部檔案，但這裡直接內嵌） -->
   </head>
 
   <body>
@@ -38,6 +18,27 @@
       <!-- Header -->
       <header>
         <div class="logo">TRIANGLE COLOR</div>
+
+        <!-- ✅ 把漢堡選單放在 header 裡 -->
+        <div class="hamburger">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-btn">
+            <span></span>
+          </label>
+
+          <div class="side-menu">
+            <ul>
+              <li><a href="index.html">首頁</a></li>
+              <li><a href="jewelry.html">珠寶系列</a></li>
+              <li><a href="watch.html">腕錶系列</a></li>
+              <li><a href="contact.html">聯絡我們</a></li>
+            </ul>
+          </div>
+
+          <div class="overlay"></div>
+        </div>
+
+        <!-- ✅ 原本的 nav -->
         <nav>
           <ul>
             <li><a href="index.html">首頁</a></li>
