@@ -283,7 +283,8 @@ footer {
     right: -260px;
     width: 260px;
     height: 100%;
-    background: #ffffff;
+    background: #f8f5ef;
+    /* ✅ 不透明白色，底部不會透 */
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     padding-top: 80px;
     transition: 0.4s ease;
