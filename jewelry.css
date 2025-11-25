@@ -27,6 +27,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(6px);
 }
 
 .logo {
@@ -227,6 +228,10 @@ footer {
 .hamburger {
     position: relative;
     z-index: 1000;
+    display: flex;
+    /* ✅ 讓按鈕與 checkbox 對齊 */
+    align-items: center;
+    /* ✅ 垂直置中 */
 }
 
 .menu-btn {
@@ -235,7 +240,12 @@ footer {
     display: none;
     cursor: pointer;
     position: relative;
+    margin-left: auto;
+    align-self: center;
+    /* ✅ 讓它在 header 裡垂直置中 */
+    cursor: pointer;
 }
+
 
 .menu-btn span,
 .menu-btn span::before,
@@ -243,9 +253,14 @@ footer {
     content: "";
     position: absolute;
     width: 35px;
-    height: 3px;
-    background: #000;
+    height: 4px;
+    /* ✅ 加粗 */
+    background: linear-gradient(to right, #d9c8a9, #f5e9c9);
+    /* ✅ 更亮的金色 */
+    box-shadow: 0 0 6px rgba(217, 200, 169, 0.8);
+    /* ✅ 外光暈，超明顯 */
     transition: 0.4s;
+    border-radius: 2px;
 }
 
 .menu-btn span {
@@ -278,6 +293,8 @@ footer {
 .side-menu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    /* ✅ 避免不同瀏覽器預設 margin */
 }
 
 .side-menu li {
@@ -290,6 +307,8 @@ footer {
     font-size: 20px;
     color: #333;
     font-weight: 500;
+    display: block;
+    padding: 10px 0;
 }
 
 /* 遮罩 */
@@ -340,16 +359,18 @@ footer {
 ------------------------------ */
 @media (max-width: 768px) {
 
+    nav ul {
+        display: none;
+    }
+
     .menu-btn {
         display: block;
     }
 
     header {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        flex-direction: column;
-        text-align: center;
     }
 
     .hero h1 {
@@ -387,4 +408,3 @@ footer {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
