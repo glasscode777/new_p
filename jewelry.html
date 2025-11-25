@@ -27,21 +27,24 @@
           </ul>
         </nav>
 
-        <div class="hamburger">
-          <input type="checkbox" id="menu-toggle" />
-          <label for="menu-toggle" class="menu-btn"><span></span></label>
+        <!-- ✅ checkbox + label -->
+        <input type="checkbox" id="menu-toggle" />
 
-          <div class="side-menu">
-            <ul>
-              <li><a href="index.html">首頁</a></li>
-              <li><a href="jewelry.html">珠寶系列</a></li>
-              <li><a href="watch.html">腕錶系列</a></li>
-              <li><a href="contact.html">聯絡我們</a></li>
-            </ul>
-          </div>
+        <label for="menu-toggle" class="menu-btn">
+          <span></span>
+        </label>
 
-          <div class="overlay"></div>
+        <!-- ✅ side-menu 與 overlay 必須跟 checkbox 同層 -->
+        <div class="side-menu">
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="jewelry.html">珠寶系列</a></li>
+            <li><a href="watch.html">腕錶系列</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+          </ul>
         </div>
+
+        <div class="overlay"></div>
       </header>
 
       <!-- Hero -->
